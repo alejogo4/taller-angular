@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component , OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-menu',
@@ -6,10 +6,22 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./menu.component.css']
 })
 export class MenuComponent implements OnInit {
+  //Variables - propiedades 
 
-  constructor() { }
+  boton1:string;
+  boton2:string;
+
+
+
+  //metodos - funciones
+
+  constructor() {
+       this.boton1 = "Inicio";
+       this.boton2 = "Sobre Mi";
+   }
 
   ngOnInit() {
+      console.log("Cargo el componente MenuComponent");
   }
 
 }

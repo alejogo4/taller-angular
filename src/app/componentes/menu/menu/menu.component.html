@@ -2,3 +2,8 @@
     <li><a href="#">{{ boton1 }}</a></li>
     <li><a href="#">{{boton2}}</a></li>
 </ul>
+
+<div *ngIf="mostrar">
+    <p>Mensaje que solo se muestra cuando pase algo</p>
+</div>
+<button (click)="MostrarOcultar()">Aparecer/Desaparecer</button>

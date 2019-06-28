@@ -10,10 +10,13 @@ export class MenuComponent implements OnInit {
 
   boton1:string;
   boton2:string;
-
+  mostrar:boolean = false;
 
 
   //metodos - funciones
+  MostrarOcultar(){
+    this.mostrar = !this.mostrar;
+  }
 
   constructor() {
        this.boton1 = "Inicio";

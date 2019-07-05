@@ -1,3 +1,10 @@
 <p>
-  contenido works!
+    contenido works!
 </p>
+<button (click)="traerDatos()">Obtener Post</button>
+
+<ul>
+    <li *ngFor="let post of datosPost">
+        {{post.id}} <br> {{post.title}}<br> {{post.body}}
+    </li>
+</ul>

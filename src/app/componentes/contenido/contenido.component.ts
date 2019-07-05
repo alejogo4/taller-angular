@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {PostService} from './../../servicios/post.service';
 
 @Component({
   selector: 'app-contenido',
@@ -7,9 +8,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ContenidoComponent implements OnInit {
 
-  constructor() { }
+  datosPost:any;
+  constructor(private servicio:PostService) { 
+      
+  }
 
   ngOnInit() {
   }
+  
 
+  traerDatos(){
+    this.servicio.obtenerPost().subscribe(
+      (datos)=>{
+          this.datosPost = datos;
+          console.log(this.datosPost);
+      }
+    );
+  }
 }

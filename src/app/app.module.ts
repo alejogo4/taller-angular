@@ -6,6 +6,10 @@ import { MenuComponent } from './componentes/menu/menu/menu.component';
 import { ContenidoComponent } from './componentes/contenido/contenido.component';
 import { FooterComponent } from './componentes/footer/footer.component';
 
+
+//Importar libreria para hacer una peticion HTTP
+import {HttpClientModule} from '@angular/common/http';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -14,7 +18,8 @@ import { FooterComponent } from './componentes/footer/footer.component';
     FooterComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
